@@ -1,0 +1,10 @@
+1. index.html: Main entry page with buttons for navigation to login and registration pages.
+2. index.js: Handles navigation from the main entry page to login and registration pages.
+3. login.html: Login page with inputs for phone number and OTP.
+4. login.js: Handles login functionality, checks if the user is old or new, and redirects accordingly.
+7. main.html: Locker management page with options to get a new locker, extend locker time, or perform operations.
+8. main.js: Handles locker management functionality, including navigation to the new locker and operations pages.
+9. operations.html: Page for locker operations (open or release).
+10. operations.js: Handles locker operations and navigation back to the locker management page.
+11. addLocker.html: Page for selecting a new locker.
+12. addLocker.js: Handles the selection of a new locker and sends data to the Raspberry Pi via ThingsBoard, also includes navigation back to the locker management page.

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 500px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .container h1 {
+            margin-bottom: 20px;
+        }
+        .container ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .container li {
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .container button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 5px;
+        }
+        .container button:hover {
+            background-color: #45a049;
+        }
+        .container .add-button {
+            background-color: #007BFF;
+        }
+        .container .add-button:hover {
+            background-color: #0056b3;
+        }
+        .container .logout-button {
+            background-color: #FF0000;
+        }
+        .container .logout-button:hover {
+            background-color: #CC0000;
+        }
+        .remaining-time {
+            font-size: 12px;
+            color: #555;
+        }
+        .scanner {
+            margin-top: 20px;
+        }
+        video {
+            width: 50%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 id="welcomeMessage">Welcome, User</h1>
+    <ul id="lockerList">
+        <!-- Lockers will be dynamically added here -->
+    </ul>
+    <button class="add-button" id="addLockerButton" style="display:none;" onclick="location.href='add_locker.html'">Add a New Locker</button>
+    <button class="logout-button" onclick="location.href='index.html'">Logout</button>
+    <div class="scanner">
+        <video id="preview"></video>
+    </div>
+    <button onclick="startScan()">Scan QR Code</button>
+</div>
+
+<script src="main_page.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
+</body>
+</html>
